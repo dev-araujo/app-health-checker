@@ -11,6 +11,12 @@ No terminal, clone o projeto:
 git clone https://github.com/dev-araujo/app-health-checker.git
 ```
 
+Entre na pasta api
+
+```
+cd api
+```
+
 Execute a aplicação:
 
 ```
