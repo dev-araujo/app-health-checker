@@ -1,0 +1,8 @@
+{
+  "build": {
+    "target": "main.go"
+  },
+  "env": {
+    "PORT": "8080"
+  }
+}

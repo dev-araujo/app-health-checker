@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -37,7 +38,10 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/healthcheck", HealthCheckHandler).Methods("GET")
 
-	port := "8080"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	fmt.Printf("Api rodando na porta %s...\n", port)
 	err := http.ListenAndServe(":"+port, r)
 	if err != nil {
